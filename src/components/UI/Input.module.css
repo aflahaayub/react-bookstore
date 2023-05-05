@@ -16,3 +16,9 @@
   font: inherit;
   padding-left: 0.5rem;
 }
+@media (max-width: 768px) {
+  .input {
+    align-items: end;
+    justify-content: end;
+  }
+}

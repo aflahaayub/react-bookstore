@@ -18,7 +18,10 @@ export default function BookItem(props) {
   return (
     <li className={styleClasses.book}>
       <div className={styleClasses.detail}>
-        <img className={styleClasses.img} src={props.img} alt="" />
+        <div className={styleClasses.image}>
+          <img className={styleClasses.img} src={props.img} alt="" />
+        </div>
+
         <div>
           <h3>{props.name}</h3>
           <div className={styleClasses.author}>{props.author}</div>
@@ -26,7 +29,7 @@ export default function BookItem(props) {
           <div className={styleClasses.price}>{price}</div>
         </div>
       </div>
-      <div>
+      <div className={styleClasses.addToCart}>
         <BookItemForm onAddToCart={addToCartHandler} id={props.id} />
       </div>
     </li>
